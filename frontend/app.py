@@ -12,9 +12,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Дорогой премиальный темный SaaS Дизайн (Cyber-Enterprise Dark Theme)
+# Полное удаление верхней полоски Streamlit Cloud и локального хедера
 st.markdown("""
 <style>
+    /* Убираем шапку Streamlit локально и в облаке */
+    header, [data-testid="stHeader"], [data-testid="stToolbar"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0px !important;
+    }
+
     .stApp {
         background: radial-gradient(circle at top left, #111827 0%, #030712 100%);
         color: #f8fafc;
